@@ -54,7 +54,7 @@
         <div class="content">
             <div class="col-left">
                 <div class="img-card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                    <img src="Image\photo.jpg" alt="" style="width:400px;height:420px;" >
+                    <img src="Image\photo.jpg" alt="" style="width:350px;px;height:300px;" >
                 </div>
             </div>
             <div class="col-right">
@@ -223,22 +223,45 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 100);
-        });
-
-        // Mobile menu toggle
-        const menuBtn = document.querySelector('.menu-btn');
-        const navigation = document.querySelector('.navigation');
-
-        menuBtn.addEventListener('click', () => {
-            navigation.classList.toggle('active');
-        });
+      AOS.init({offset:0});
     </script>
-</html>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelectorAll(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
 </body>
 </html>

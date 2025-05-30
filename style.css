@@ -195,6 +195,8 @@ header .brand {
     background-clip: text;
 }
 
+
+
 header .navigation a {
     color: var(--text-gray);
     font-size: 1em;
@@ -204,6 +206,11 @@ header .navigation a {
     transition: all 0.3s ease;
     position: relative;
 }
+
+header .navigation a:hover {
+    color: var(--text-light);
+}
+
 
 header .navigation a::after {
     content: '';
@@ -216,9 +223,47 @@ header .navigation a::after {
     transition: 0.3s ease;
 }
 
-header .navigation a:hover {
-    color: var(--text-light);
+@media (max-width: 768px) {
+    header .navigation.active {
+        z-index: 889;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 20%;
+        left: 50%;
+        width: 380px;;
+        justify-content: center;
+        /* align-items: center; */
+        background: rgba(15, 23, 42, 0.95);
+        box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
+        padding: 20% 14%;
+        height: 100vh;
+        transition: 0.3s ease;
+
+    }
+
+    .menu-btn.active{
+        z-index: 999;
+        background-image: url(Image/close.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px;
+        transition: 0.3s ease;
+        filter: invert(1);
+    }
+
+    header .navigation a{
+        color: rgb(245, 238, 238);
+        font-size: 1.2em;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 5px;
+    }
+
 }
+
 
 header .navigation a:hover::after {
     width: 100%;
@@ -337,7 +382,7 @@ header .navigation a:hover::after {
 
 .about .content .col-left {
     flex: 1;
-    max-width: 400px;
+    max-width: 250px;
 }
 
 .about .content .col-right {
@@ -346,13 +391,14 @@ header .navigation a:hover::after {
 
 .about .content .col-left .img-card {
     position: relative;
-    width: 100%;
+    width: 250px;
+    height: 250px;
     border-radius: 20px;
     overflow: hidden;
     background: var(--gradient);
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     display: flex;
-    align-items: center;
+    align-items:baseline;
     justify-content: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
