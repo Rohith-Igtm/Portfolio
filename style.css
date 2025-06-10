@@ -252,6 +252,23 @@ header .navigation a::after {
     transition: 0.3s ease;
 }
 
+@media (max-width: 480px){
+    
+    .main .content h2 span {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-light);
+    font-size: 70em;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .right{
+        flex: 1 1 100%;
+        margin-right:85px;
+        align-items: center;
+    }
+}
+
 @media (max-width: 768px) {
     header .navigation.active {
         z-index: 889;
@@ -417,7 +434,16 @@ header .navigation a:hover::after {
 .about .content .col-right {
     flex: 1;
 }
+@media (max-width:480px){
+    .about {
+    background: var(--dark-bg);
+    }
 
+    .about .content .btn{
+        margin-right:50px;
+        align-items: center;
+    }
+}
 .about .content .col-left .img-card {
     position: relative;
     width: 250px;
@@ -454,6 +480,16 @@ header .navigation a:hover::after {
 }
 
 /* Skills Section */
+
+@media (max-width: 480px) {
+    .skills {
+    background: var(--card-bg);
+    }
+    .skills .content .btn {
+        margin-right:50px;
+        align-self: center;
+    }
+}
 .skills {
     background: var(--card-bg);
 }
