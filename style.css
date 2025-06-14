@@ -124,7 +124,8 @@ section {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 20px; /* Optional: adjust spacing if needed */
+    margin-bottom: 20px;
+    margin-right:120px; /* Optional: adjust spacing if needed */
 }
 
 .btn {
@@ -174,8 +175,9 @@ section {
 .media-icons {
     display: flex;
     gap:20px;
-    margin-top: 50px;
-    margin-left: 70px;
+    margin-top: 40px;
+    /* margin-left: 70px; */
+    margin-right:50px;
 }
 
 .media-icons a {
