@@ -252,21 +252,23 @@ header .navigation a::after {
     transition: 0.3s ease;
 }
 
+
 @media (max-width: 480px){
     
-    .main .content h2 span {
-    display: block;
-    margin-top: 10px;
-    color: var(--text-light);
-    font-size: 70em;
-    font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    .right{
-        flex: 1 1 100%;
-        margin-right:85px;
-        align-items: center;
-    }
+    * {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .container, .wrapper, .main-content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 768px) {
